@@ -30,7 +30,7 @@ The API key is read from an environment variable and is no longer written in the
 
 ## Notes on fixes
 
-- **API key removed** from the notebook. The old key is still in the commit history, so it should be revoked in the MAPID dashboard.
+- **API key removed** from the notebook.
 - **Buffer was not saved.** The result of `buffer(100)` was not assigned, so the "buffered" file held the original polygons. Fixed.
 - **Simplify was not saved.** The result of `simplify` was also unused, so the "Simplify" file was identical to the buffer file. Fixed, with the tolerance in meters.
 - **Wrong area unit.** `AREA_KM2` was previously calculated in EPSG:4326 (degrees), giving values around 1e-10. It is now calculated in UTM zone 48S (EPSG:32748).
@@ -80,7 +80,7 @@ API key dibaca dari environment variable, tidak lagi ditulis di notebook.
 
 ## Catatan perbaikan
 
-- **API key dihapus** dari notebook. Key lama masih ada di riwayat commit, jadi sebaiknya dicabut di dashboard MAPID.
+- **API key dihapus** dari notebook.
 - **Buffer tidak tersimpan.** Hasil `buffer(100)` sebelumnya tidak di-assign, sehingga file "buffered" berisi poligon asli. Sudah diperbaiki.
 - **Simplify tidak tersimpan.** Hasil `simplify` sebelumnya juga tidak dipakai, sehingga file "Simplify" sama dengan file buffer. Sudah diperbaiki, dengan toleransi dalam meter.
 - **Luas salah satuan.** `AREA_KM2` sebelumnya dihitung di EPSG:4326 (derajat), sehingga nilainya sekitar 1e-10. Sekarang dihitung di UTM zona 48S (EPSG:32748).
